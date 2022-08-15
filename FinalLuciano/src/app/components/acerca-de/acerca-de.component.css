@@ -9,9 +9,10 @@ div{
 @media(min-width: 576px){
     #fotPerfil{
         position: absolute;
-        width: 15%;
+        width: 20%;
         box-shadow: 3px 3px 3px rgb(123, 111, 238);
-        left: 3%;
+        left: 12%;
+        top: 550px;
     }
 }
 @media(max-width: 575px){
