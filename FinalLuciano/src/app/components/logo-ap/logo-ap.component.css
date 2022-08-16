@@ -12,4 +12,22 @@
 img{
     width: 45px;
 }
+
+.redes img{
+    margin: 0.2em;
+}
+
 /* --Para la vista de celular --*/
+@media (max-width: 575){
+    .container{
+        flex-direction: column;
+    }
+    .redes{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .redes img{
+        margin: 0.2em;
+    }
+}
