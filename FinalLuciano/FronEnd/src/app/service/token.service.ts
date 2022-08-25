@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 const TOKEN_KEY = 'AuthToken';
-const USERNAME_KEY = 'AuthUsarname':
+const USERNAME_KEY = 'AuthUsarname';
 const AUTHORITIES_KEY = 'AutAutorities';
 
 @Injectable({
@@ -38,15 +38,18 @@ export class TokenService {
 
   public getAuthorities(): string[]{
     this.roles = [];
-    if(sessionStorage.getItem(AUTHORITIES_KEY){
+    if(sessionStorage.getItem(AUTHORITIES_KEY)){
       JSON.parse(sessionStorage.getItem(AUTHORITIES_KEY)!).forEach((authority:any) => {
         this.roles.push(authority.authority);
       });
+
     }
     return this.roles;
   }
+
   public logOut(): void{
     window.sessionStorage.clear();
   }
+
 
 }
