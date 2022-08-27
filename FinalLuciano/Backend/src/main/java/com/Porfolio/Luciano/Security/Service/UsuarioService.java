@@ -29,7 +29,7 @@ public class UsuarioService {
         return iusuarioRepository.existsByEmail(email);
     }
     
-    public void sace(Usuario usuario){
+    public void save(Usuario usuario){
         iusuarioRepository.save(usuario);
     }
     

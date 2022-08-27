@@ -13,7 +13,6 @@ import com.Porfolio.Luciano.Security.Enums.RolNombre;
 import com.Porfolio.Luciano.Security.Service.RolService;
 import com.Porfolio.Luciano.Security.Service.UsuarioService;
 import com.Porfolio.Luciano.Security.jwt.JwtProvider;
-import io.jsonwebtoken.Jwt;
 import java.util.HashSet;
 import java.util.Set;
 import javax.validation.Valid;
@@ -68,7 +67,7 @@ public class AuthController {
         if(nuevoUsuario.getRoles().contains("admin"))
             roles.add(rolService.getByRolNombre(RolNombre.ROLE_USER).get());
         usuario.setRoles(roles);
-        usuarioService.sace(usuario);
+        usuarioService.save(usuario);
         
         return new ResponseEntity(new Mensaje("Usuario guardado"),HttpStatus.CREATED);
     }

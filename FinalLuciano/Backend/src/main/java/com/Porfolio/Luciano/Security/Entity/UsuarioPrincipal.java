@@ -44,13 +44,19 @@ public class UsuarioPrincipal implements UserDetails {
     public String getPassword() {
         return password;
     }
-
+    
     public String getNombre() {
         return nombre;
     }
     
+ 
     public String getEmail() {
         return email;
+    }
+
+    @Override
+    public String getUsername() {
+        return nombreUsuario;
     }
 
     @Override
@@ -73,9 +79,5 @@ public class UsuarioPrincipal implements UserDetails {
         return true;
     }
 
-    @Override
-    public String getUsername() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 
 }
