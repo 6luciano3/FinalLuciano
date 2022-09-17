@@ -5,15 +5,15 @@
 package com.Porfolio.Luciano.Service;
 
 import com.Porfolio.Luciano.Entity.Persona;
-import com.Porfolio.Luciano.Interface.iPersonaService;
-import com.Porfolio.Luciano.Repository.iPersonaRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import com.Porfolio.Luciano.Repository.IPersonaRepository;
+import com.Porfolio.Luciano.Interface.IPersonaService;
 
 @Service
-public class ImpPersonaService implements iPersonaService{
-    @Autowired iPersonaRepository IPersonaRepository;
+public class ImpPersonaService implements IPersonaService{
+    @Autowired IPersonaRepository IPersonaRepository;
     
 
     @Override

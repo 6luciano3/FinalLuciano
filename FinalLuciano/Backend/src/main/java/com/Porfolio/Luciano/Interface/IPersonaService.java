@@ -9,7 +9,7 @@ import java.util.List;
 
 
 
-public interface iPersonaService {
+public interface IPersonaService {
     // Traer una lista de personas
     public List<Persona> getPersona();
     

@@ -5,7 +5,6 @@
 package com.Porfolio.Luciano.Controller;
 
 import com.Porfolio.Luciano.Entity.Persona;
-import com.Porfolio.Luciano.Interface.iPersonaService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -17,11 +16,12 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import com.Porfolio.Luciano.Interface.IPersonaService;
 
 @RestController
 @CrossOrigin(origins = "http://localhost::4200")
 public class PersonaController {
-    @Autowired iPersonaService IPersonaService;
+    @Autowired IPersonaService IPersonaService;
     
     @GetMapping("personas/traer")
     public List<Persona> getPersona(){
